@@ -3,7 +3,7 @@
 require('dbconnect.php');
 
 $json_str = file_get_contents('php://input');
-$json_obj = json_decode($json_str);
+$json_obj = json_decode($json_str, true);
 
 
 # inboundSMSMessageList is the POST data specified by glab to send.
