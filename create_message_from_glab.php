@@ -2,10 +2,10 @@
 
 require('dbconnect.php');
 
+# get json post data from globe lab
 $json_str = file_get_contents('php://input');
+# decode json and convert json to associative array
 $json_obj = json_decode($json_str, true);
-
-
 
 # inboundSMSMessageList is the POST data specified by glab to send.
 # refer to this link:
