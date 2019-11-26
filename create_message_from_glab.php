@@ -1,9 +1,10 @@
 <?php
-
+/*
 require('dbconnect.php');
 
 $json_str = file_get_contents('php://input');
 $json_obj = json_decode($json_str, true);
+
 
 
 # inboundSMSMessageList is the POST data specified by glab to send.
@@ -21,3 +22,10 @@ $sql = "insert into messages (text_msg, sender) VALUES (#{$msg}, #{$sender})";
 $conn->query($sql);
 
 $conn->close();
+
+*/
+
+$json_str = file_get_contents('php://input');
+$json_obj = json_decode($json_str, true);
+
+file_put_contents("php://stderr", $json_obj .PHP_EOL);
