@@ -30,4 +30,4 @@ $json_obj = json_decode($json_str, true);
 
 
 
-file_put_contents("php://stderr", var_dump($json_obj) .PHP_EOL);
+file_put_contents("php://stderr", $json_str .PHP_EOL);
