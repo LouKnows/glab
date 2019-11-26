@@ -12,7 +12,7 @@ File Functions:
 </ul>
 
 
-<h3>= create_message_from_glab.php =</h3>
+<h3>= notify_uri.php =</h3>
 <ul>
 <li> used to save incoming text message from the subscriber.</li>
 <li> only saved the text message and the subscriber's mobile number</li>
