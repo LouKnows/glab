@@ -31,3 +31,6 @@ $json_obj = json_decode($json_str, true);
 
 
 file_put_contents("php://stderr", $json_str .PHP_EOL);
+
+file_put_contents("php://stderr", $json_obj['inboundSMSMessageList'] . PHP_EOL . PHP_EOL);
+file_put_contents("php://stderr", $json_obj['inboundSMSMessageList']['inboundSMSMessage'][0] . PHP_EOL . PHP_EOL);
