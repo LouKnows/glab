@@ -22,16 +22,3 @@ $sql = "insert into messages (text_msg, sender) values ('#{$msg}', '#{$sender}')
 $conn->query($sql);
 
 $conn->close();
-
-
-/*
-$json_str = file_get_contents('php://input');
-$json_obj = json_decode($json_str, true);
-
-
-
-file_put_contents("php://stderr", $json_str .PHP_EOL);
-
-file_put_contents("php://stderr", "Data here ---> " . $json_obj['inboundSMSMessageList']['inboundSMSMessage'][0]['message'] . "<---- Data here" . PHP_EOL . PHP_EOL);
-
-*/
