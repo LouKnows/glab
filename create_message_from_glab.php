@@ -2,10 +2,14 @@
 
 require('dbconnect.php');
 
+$json_str = file_get_contents('php://input');
+$json_obj = json_decode($json_str);
+
+
 # inboundSMSMessageList is the POST data specified by glab to send.
 # refer to this link:
-# http://www.globelabs.com.ph/docs/#sms-receiving-sms-sms-mo 
-$msg_list = $_POST['inboundSMSMessageList'];
+# http://www.globelabs.com.ph/docs/#sms-receiving-sms-sms-mo
+$msg_list = $json_obj['inboundSMSMessageList'];
 $inbound_msg_info = $msg_list['inboundSMSMessage'][0];
 
 # the data to be inserted:
