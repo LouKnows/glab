@@ -28,4 +28,6 @@ $conn->close();
 $json_str = file_get_contents('php://input');
 $json_obj = json_decode($json_str, true);
 
-file_put_contents("php://stderr", $json_obj .PHP_EOL);
+
+
+file_put_contents("php://stderr", var_dump($json_obj) .PHP_EOL);
