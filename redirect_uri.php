@@ -7,7 +7,7 @@ require 'dbconnect.php';
 if($_SERVER['REQUEST_METHOD'] == 'GET'){
 	if(isset($_GET['access_token']) && $_GET['subscriber_number']){
 		$subscriber_token = $_GET['access_token'];
-		$subscriber_number = $_GET['subscriber_number'];
+		$subscriber_number = '+63' . $_GET['subscriber_number'];
 
 		$sql = "insert into subscribers (access_token, mobile_number) values ('$subscriber_token','$subscriber_number')";
 

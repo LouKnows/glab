@@ -14,7 +14,12 @@
 	<ul>
 		<?php
 			foreach ($messages as $msg) {
-				echo '<li>' . $msg['text_msg'] . ' from ' . $msg['sender'] . '</li>';
+				$to = $msg['sender'];
+				$token = $msg['access_token'];
+				echo '<li>';
+				echo $msg['text_msg'];
+				echo "<span><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>" 
+				echo '</li>';
 			}
 		?>
 	</ul>
