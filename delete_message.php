@@ -7,3 +7,5 @@ $sql = "delete from messages where id = $id";
 
 $conn->query($sql);
 $conn->close();
+
+header("Location: index.php");
