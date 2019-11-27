@@ -34,6 +34,11 @@
 			color: #31708f;
 			padding: 7px 15px;
 			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.btn:hover{
+			background-color: #d1f0ff;
 		}
 	</style>
 </head>
