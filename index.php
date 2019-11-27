@@ -35,6 +35,12 @@
 		}
 
 		span{
+			display: inline-block;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		span.reply{
 			background-color: #d9edf7;
 			border-color: #bce8f1;
 			color: #31708f;
@@ -42,11 +48,12 @@
 			border-radius: 5px;
 			padding: 5px;
 		}
+
 		a{
 			color: inherit;
 			text-decoration: none;
 		}
-		span:hover{
+		span.reply:hover{
 			background-color: #d1f0ff;
 		}
 	</style>
@@ -61,8 +68,8 @@
 						$to = $msg['sender'];
 						$token = $msg['access_token'];
 						echo '<li>';
-						echo $msg['text_msg'];
-						echo "<span><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>";
+						echo '<span>' . $msg['text_msg'] . '</span>';
+						echo "<span class='reply'><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>";
 						echo '</li>';
 					}
 				?>

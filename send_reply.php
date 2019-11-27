@@ -1,5 +1,6 @@
 <?php
 
+$notice = '';
 $senderAddress = '0609'; // last 4-digits of short code;
 $access_token = $_POST['access_token'];
 $address = $_POST['address'];
@@ -33,11 +34,43 @@ $response = curl_exec($curl);
 $err = curl_error($curl);
 curl_close($curl);
 if ($err) {
-  echo "cURL Error #:" . $err;
+  $notice = "cURL Error #:" . $err . ' ';
 } else {
-  echo "Successfully sent the message";
+  $notice = "Successfully sent the message. Click ";
 }
 
 ?>
 
-<a href="/">Back to index</a>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sent status</title>
+</head>
+<style type="text/css">
+	body{
+		background-color: #404040;
+	}
+	p{
+		padding: 20px 30px;
+		color: #31708f;
+    	background-color: #d9edf7;
+    	border-color: #bce8f1;
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	transform: translate(-50%,-50%);
+	}
+
+	a{
+		color: inherit;
+		text-decoration: underline;
+	}
+	a:hover{
+		color: #fff;
+		text-decoration: none;
+	}
+</style>
+<body>
+<p><?php echo $notice ?><a href="/">back to index</a></p>
+</body>
+</html>
