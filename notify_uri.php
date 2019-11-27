@@ -18,11 +18,10 @@ $msg = $inbound_msg_info['message'];
 $sender = $inbound_msg_info['senderAddress'];
 
 # cleanup the data
-$msg = substr($msg,1);
 $sender = preg_replace('/[^0-9\+]/','',$sender);
 
 # insert data to the database:
-$sql = "insert into messages (text_msg, sender) values ('#{$msg}', '#{$sender}')";
+$sql = "insert into messages (text_msg, sender) values ('$msg', '$sender')";
 $conn->query($sql);
 
 $conn->close();
