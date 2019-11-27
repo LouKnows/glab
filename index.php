@@ -11,13 +11,18 @@
 	<style type="text/css">
 		.body{
 			background-color: #f2f2f2;
-			font-family: sans-serif;
 		}
 		.container{
 			width: 80%;
 			height: 100vh;
 			margin: auto;
 			position: relative;
+			color: #404040;
+			font-family: sans-serif;
+		}
+
+		ul{
+			list-style-type: none;
 		}
 
 		li{
