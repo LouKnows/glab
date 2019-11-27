@@ -40,11 +40,18 @@
 			margin-right: 10px;
 		}
 
+		span.delete{
+			color: #a94442;
+		    background-color: #f2dede;
+		    border-color: #ebccd1;
+		    border-radius: 5px;
+			padding: 5px;
+		}
+
 		span.reply{
 			background-color: #d9edf7;
 			border-color: #bce8f1;
 			color: #31708f;
-			margin-right: 30px;
 			border-radius: 5px;
 			padding: 5px;
 		}
@@ -67,9 +74,11 @@
 					foreach ($messages as $msg) {
 						$to = $msg['sender'];
 						$token = $msg['access_token'];
+						$id = $msg['id'];
 						echo '<li>';
 						echo '<span>' . $msg['text_msg'] . '</span>';
 						echo "<span class='reply'><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>";
+						echo "<span class='delete'><a href='delete_message.php?id=$id'>Delete</a></span>"
 						echo '</li>';
 					}
 				?>
