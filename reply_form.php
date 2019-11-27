@@ -40,10 +40,16 @@
 		.btn:hover{
 			background-color: #d1f0ff;
 		}
+
+		a h3{
+			text-decoration: none;
+			color: #31708f;
+		}
 	</style>
 </head>
 <body>
 	<div class="container">
+		<a href="index.php"><h3><< Back</h3></a>
 		<div class="form">
 			<form action="send_reply.php" method="POST">
 				<p>To: +<?php echo $to; ?></p>
