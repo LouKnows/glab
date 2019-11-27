@@ -12,6 +12,7 @@
 			height: 100vh;
 			width: 100%;
 			position: relative;
+			background-color: #404040;
 		}
 		.form{
 			border: 1px solid #cce6ff;
@@ -24,7 +25,6 @@
 			transform: translate(-50%,-50%);
 			color: #31708f;
 			font-family: sans-serif;
-			margin-top: 50%;
 			border-radius: 5px;
 		}
 
@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="form">
 			<form action="send_reply.php" method="POST">
-				<p>To: <?php echo $to; ?></p>
+				<p>To: +<?php echo $to; ?></p>
 				<input type="hidden" name="address" value="<?php echo $to; ?>" >
 				<input type="hidden" name="access_token" value="<?php echo $token; ?>" >
 				<p>Message:</p>
