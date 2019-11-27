@@ -21,6 +21,10 @@
 			font-family: sans-serif;
 		}
 
+		.messages{
+			width: 300px;
+		}
+
 		ul{
 			list-style-type: none;
 		}
