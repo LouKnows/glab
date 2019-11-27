@@ -18,7 +18,7 @@
 				$token = $msg['access_token'];
 				echo '<li>';
 				echo $msg['text_msg'];
-				echo "<span><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>" 
+				echo "<span><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>";
 				echo '</li>';
 			}
 		?>

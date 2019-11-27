@@ -11,9 +11,9 @@
 <body>
 	<div>
 		<form action="send_reply.php" method="POST">
-			<p>To: <?php echo $to ?></p>
-			<input type="hidden" name="address" value="<?php echo $to ?>" >
-			<input type="hidden" name="access_token" value="<?php echo $token ?>" >
+			<p>To: <?php echo $to; ?></p>
+			<input type="hidden" name="address" value="<?php echo $to; ?>" >
+			<input type="hidden" name="access_token" value="<?php echo $token; ?>" >
 			<p>Message:</p>
 			<p>
 				<textarea name='outbound-msg'>		
