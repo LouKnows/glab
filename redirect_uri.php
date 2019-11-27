@@ -21,12 +21,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$json_str = file_get_contents('php://input');
 	$json_obj = json_decode($json_str, true);
 
-	file_put_contents('php://stderr', ">>>>>> Unsubscribed <<<<<<" . PHP_EOL);
-
 	$number = $json_obj['unsubscribed']['subscriber_number'];
 	$number = '+63' . $number;
-
-	file_put_contents('php://stderr', ">>>>>> $number <<<<<<" . PHP_EOL);
 
 	$sql_remove_safe = 'SET SQL_SAFE_UPDATES = 0;';
 	$sql_remove_subscriber = "delete from subscribers where BINARY mobile_number = BINARY '$number';";
