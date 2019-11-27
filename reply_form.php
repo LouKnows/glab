@@ -46,8 +46,9 @@
 			position: absolute;
 			text-decoration: none;
 			color: #cce6ff;
-			top: -30px;
-			left: -30px;
+			top: -60px;
+			left: -80px;
+			font-weight: normal;
 		}
 	</style>
 </head>
