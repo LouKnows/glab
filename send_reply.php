@@ -59,6 +59,8 @@ if ($err) {
     	top: 50%;
     	left: 50%;
     	transform: translate(-50%,-50%);
+    	font-family: sans-serif;
+    	border-radius: 5px;
 	}
 
 	a{
@@ -66,7 +68,7 @@ if ($err) {
 		text-decoration: underline;
 	}
 	a:hover{
-		color: #fff;
+		color: #549fc4;
 		text-decoration: none;
 	}
 </style>

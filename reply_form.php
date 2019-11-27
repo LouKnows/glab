@@ -54,6 +54,12 @@
 		a h3:hover{
 			color: #fff;
 		}
+
+		textarea{
+			font-family: sans-serif;
+			font-size: 14px;
+			padding: 5px 10px;
+		}
 	</style>
 </head>
 <body>
