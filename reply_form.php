@@ -59,7 +59,7 @@
 <body>
 	<div class="container">
 		<div class="form">
-			<a href="index.php"><h3><< Back</h3></a>
+			<a href="index.php"><h3>Back</h3></a>
 			<form action="send_reply.php" method="POST">
 				<p>To: +<?php echo $to; ?></p>
 				<input type="hidden" name="address" value="<?php echo $to; ?>" >
