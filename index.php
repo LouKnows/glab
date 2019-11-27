@@ -78,7 +78,7 @@
 						echo '<li>';
 						echo '<span>' . $msg['text_msg'] . '</span>';
 						echo "<span class='reply'><a href='reply_form.php?to=$to&token=$token'>Reply</a></span>";
-						echo "<span class='delete'><a href='delete_message.php?id=$id'>Delete</a></span>"
+						echo "<span class='delete'><a href='delete_message.php?id=$id'>Delete</a></span>";
 						echo '</li>';
 					}
 				?>
