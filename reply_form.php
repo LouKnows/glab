@@ -49,6 +49,10 @@
 			top: -60px;
 			left: -80px;
 			font-weight: normal;
+			text-decoration: underline;
+		}
+		a h3:hover{
+			color: #fff;
 		}
 	</style>
 </head>
