@@ -25,14 +25,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	$number = $json_obj['unsubscribed']['subscriber_number'];
 	$number = '+63' . $number;
 
-	$sql_remove_safe = 'SET SQL_SAFE_UPDATES = 0;';
-	$sql_remove_subscriber = "delete from subscribers where BINARY mobile_number = BINARY '$number';";
-	$sql_remove_messages = "delete from messages where BINARY sender = BINARY '$number';";
-	$sql = $sql_remove_safe . $sql_remove_subscriber . $sql_remove_messages;
-
-		file_put_contents('php://stderr', ">>>>>> $sql <<<<<<" . PHP_EOL);
-
-	$conn->query($sql);
+	$sql_remove_subscriber = "SET SQL_SAFE_UPDATES=0; delete from subscribers where BINARY mobile_number = BINARY '$number';";
+	$conn->query($sql_remove_subscriber);
+	$sql_remove_messages = "SET SQL_SAFE_UPDATES=0; delete from messages where BINARY sender = BINARY '$number';";
+	$conn->query($sql_remove_messages);
 }
 
 $conn->close();
