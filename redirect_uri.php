@@ -28,9 +28,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	file_put_contents('php://stderr', ">>>>>> $number <<<<<<" . PHP_EOL);
 
+	$sql_remove_safe = 'SET SQL_SAFE_UPDATES = 0;';
 	$sql_remove_subscriber = "delete from subscribers where BINARY mobile_number = BINARY '$number';";
 	$sql_remove_messages = "delete from messages where BINARY sender = BINARY '$number';";
-	$sql = $sql_remove_subscriber . $sql_remove_messages;
+	$sql = $sql_remove_safe . $sql_remove_subscriber . $sql_remove_messages;
 
 	$conn->query($sql);
 }
